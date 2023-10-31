@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2115 - tabela</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #cc0404;
+            color: #cc0404;
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #444;
+            color: #cc0404;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white; /* kolor liter w odniesieniach*/
+            margin: 10px;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #cc0404;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #e5e5e5;
+        }
+        td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="21i15.png" alt="Logo Strony" style="width: 500px; height: 500px;">
+    </header>
+    <nav>
+        <a href="https://miszel2115.github.io/main/" >Strona Miszela</a>
+        <a href="https://sklep.2115.pl/pl/p/2115-RODZINNY-BIZNES-MIXTAPE-2-CD-STANDARD/41" target="_blank">O Nas</a>
+        <a href="https://sklep.2115.pl/" target="_blank">Sklep</a>
+        <a href="https://sklep.2115.pl/pl/i/KONTAKT/9" target="_blank">Kontakt</a>
+    </nav>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Ksywka</th>
+                <th>Nazwa Albumu</th>
+                <th>Status</th>
+                <th>Rok wydania</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Blacha 2115</td>
+                <td>Fama</td>
+                <td>złota płyta</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>Bedoes 2115</td>
+                <td>Opowieści z Doliny Smoków</td>
+                <td>diamentowa płyta</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td rowspan="2">White 2115</td>
+                <td>Rockstar</td>
+                <td>2x platynowa płyta</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Pretty Boy</td>
+                <td>2× platynowa płyta</td>
+                <td>2022</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+<footer>
+    <p>&copy; 2023 By Miszel</p>
+    <p>Data: <span id="currentDate"></span></p>
+    <script>
+       function aktualizujDate() {
+        const currentDateElement = document.getElementById("currentDate");
+        const aktualnaData = new Date();
+        currentDateElement.textContent = aktualnaData.toLocaleDateString() + " " + aktualnaData.toLocaleTimeString();
+    }
+
+    // Wywołanie funkcji aktualizującej datę na początku
+    aktualizujDate();
+
+    // Ustawienie interwału, aby odświeżać datę co sekundę
+    setInterval(aktualizujDate, 1000);
+
+    </script>
+</footer>
+</body>
+</html>
